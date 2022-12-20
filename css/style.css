@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body, html{
+    font-family: "Open sans";
+    height: 100%;
+}
+
+body{
+    min-height: 100vh;
+    margin: 20px;
+    padding: 0;
+}
+
+*{
+    user-select: none;
+}
+.task{
+    word-break: break-all;
+    z-index: 999;
+    cursor: move;
+    width: 200px;
+    padding: 10px;
+    min-height: 200px;
+    height: fit-content;
+
+    background-color: red;
+}
+
+.taskTitle{
+    text-align: center;
+
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.folder{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    padding: 20px;
+    cursor: move;
+    position: absolute;
+    float: left;
+    min-width: 250px;
+    width: 400px;
+    min-height: 240px;
+    background-color: beige;
+}
+
+.task-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    gap: 10px;
+
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 300vh;
+
+    background-color: antiquewhite;
+}
+
+textarea{
+    border-radius: 0.375rem;
+    resize: none;
+}
+
+.createForm{
+    width: 60%;
+    margin: auto;
+    gap: 50px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.createForm > *{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.createTaskContainer, .createFolderContainer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.createFolderContainer input[type=color], #taskColor{
+    width: 100%;
+}
+
+button{
+    width: 200px;
+}
+
+.folderName{
+    text-align: center;
+    width: 100%;
+}
